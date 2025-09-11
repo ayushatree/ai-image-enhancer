@@ -1,21 +1,16 @@
 import axios from "axios";
 
-const API_KEY = "wx7g5yd9csbk0lyk4";
+const API_KEY = import.meta.env.VITE_API_KEY_PICWISH;
 const BASE_URL = "https://techhk.aoscdn.com";
 const MAXIMUM_RETRIES = 20;
 
 export const enhancedImageAPI = async (file) => {
   try {
-    // Convert to JPEG to ensure supported format
     const jpegFile = await convertToJpeg(file);
-
     const taskId = await uploadImage(jpegFile);
     console.log("✅ Task ID:", taskId);
-
     const result = await pollForEnhancedImage(taskId);
     console.log("✅ Enhanced Result:", result);
-
-    // Return final image URL directly
     return result?.image_url || result?.image;
   } catch (error) {
     console.error("Enhance API error:", error.message);
