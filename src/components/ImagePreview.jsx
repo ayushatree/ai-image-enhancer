@@ -25,7 +25,7 @@ const ImagePreview = ({ uploaded, enhanced, loading }) => {
             className="w-full h-full object-cover"
           />
         ) : (
-          <div className="flex items-center justify-center h-80 bg-gray-200">
+          <div className="flex items-center justify-center h-full bg-gray-200">
             No Image Selected
           </div>
         )}
@@ -40,7 +40,7 @@ const ImagePreview = ({ uploaded, enhanced, loading }) => {
         {loading && <Loading />}
 
         {!loading && enhanced ? (
-          <div className="relative w-full h-[400px]">
+          <div className="relative w-full h-full">
             {/* Image full cover */}
             <img
               src={enhanced}
@@ -49,7 +49,7 @@ const ImagePreview = ({ uploaded, enhanced, loading }) => {
             />
 
             {/* Transparent overlay button */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+            <div className="absolute bottom-14 left-1/2  transform -translate-x-1/2">
               <button
                 onClick={downloadImage}
                 className="px-6 py-2 rounded-xl backdrop-blur-md bg-white/30 text-white font-medium shadow-lg hover:bg-white/50 transition"
