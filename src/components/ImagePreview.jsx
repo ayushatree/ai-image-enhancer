@@ -60,7 +60,7 @@ const ImagePreview = ({ uploaded, enhanced, loading }) => {
           </div>
         ) : (
           !loading && (
-            <div className="flex items-center justify-center h-80 bg-gray-200">
+            <div className="flex items-center justify-center h-full bg-gray-200">
               No Enhanced Image
             </div>
           )
