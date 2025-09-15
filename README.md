@@ -14,7 +14,7 @@ Enhance your images using AI in seconds. Upload an image and view the enhanced r
 
 ## Live Demo
 
-[Try it here](https://ai-image-enhancer-nu.vercel.app/)
+[Try it here](https://ai-image-enhancer-rho-topaz.vercel.app/)
 
 ---
 
