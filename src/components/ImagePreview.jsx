@@ -1,15 +1,15 @@
 import Loading from "./Loading";
 
 const ImagePreview = ({ uploaded, enhanced, loading }) => {
-  // const downloadImage = () => {
-  //   if (!enhanced) return;
-  //   const link = document.createElement("a");
-  //   link.href = enhanced;
-  //   link.download = "enhanced.jpg";
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
+  const downloadImage = () => {
+    if (!enhanced) return;
+    const link = document.createElement("a");
+    link.href = enhanced;
+    link.download = "enhanced.jpg";
+    document.body.appendChild(link);
+    link.click();
+    // document.body.removeChild(link);
+  };
 
   return (
     <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
