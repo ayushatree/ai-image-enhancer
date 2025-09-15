@@ -49,14 +49,14 @@ const ImagePreview = ({ uploaded, enhanced, loading }) => {
             />
 
             {/* Transparent overlay button */}
-            {/* <div className="absolute bottom-14 left-1/2  transform -translate-x-1/2">
+            <div className="absolute bottom-14 left-1/2  transform -translate-x-1/2">
               <button
                 onClick={downloadImage}
                 className="px-6 py-2 rounded-xl backdrop-blur-md bg-white/30 text-white font-medium shadow-lg hover:bg-white/50 transition"
               >
                 ⬇ Download Image
               </button>
-            </div> */}
+            </div>
           </div>
         ) : (
           !loading && (
